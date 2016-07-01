@@ -22,7 +22,7 @@ def send(subject, users, data={}, template=DEFAULT_TEMPLATE):
     Additional information.
     -----------------------
 
-    Example: cvl_mail.send("subject", "skubriev@cvisionlab.com", { 'body':'body', 'sender':'admin@server' } )
+    Example: cvl_mail.send("subject", ("manager@example.com","admin@example.com"), { 'body':'body', 'sender':'server@int.example.com' } )
     """
 
     file = open(template, 'r')
