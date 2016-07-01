@@ -18,7 +18,7 @@ setup(
     name=root_pkg,
     description='CVISIONLAB OPS Python Utils',
     long_description=open('README.txt').read(),
-    version='1.1',
+    version='1.5',
     author='Skubriev Vladimir',
     author_email='skubriev@cvisionlab.com',
     license='GPL',
