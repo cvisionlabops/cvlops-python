@@ -17,10 +17,12 @@ for subdir, _, _ in os.walk(root):
 setup(
     name=root_pkg,
     description='CVISIONLAB OPS Python Utils',
+    long_description=open('README.txt').read(),
     version='1.0',
     author='Skubriev Vladimir',
     author_email='skubriev@cvisionlab.com',
     license='GPL',
+    url='https://github.com/cvisionlabops/cvlops-python',
     install_requires=[
                   'smtplib',
                   'jinja2'
