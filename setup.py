@@ -18,7 +18,7 @@ setup(
     name=root_pkg,
     description='CVISIONLAB OPS Python Utils',
     long_description=open('README.txt').read(),
-    version='1.6',
+    version='1.17',
     author='Skubriev Vladimir',
     author_email='skubriev@cvisionlab.com',
     license='GPL',
@@ -26,5 +26,8 @@ setup(
     install_requires=[
                   'jinja2'
     ],
-    packages=packages
+    packages=packages,
+    package_data={'cvlops': ['jinja2']},
+    #data_files=[('jinja2',['jinja2'])],
+    #include_package_data=True
 )

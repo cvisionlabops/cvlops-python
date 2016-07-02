@@ -7,7 +7,21 @@ from email.mime.multipart import MIMEMultipart
 
 from jinja2 import Environment
 
-DEFAULT_TEMPLATE=os.path.dirname(os.path.abspath(__file__))+'/generic.jinja2'
+# TODO 
+#DEFAULT_TEMPLATE=os.path.dirname(os.path.abspath(__file__))+'/generic.jinja2'
+
+DEFAULT_TEMPLATE= """
+<html><body>
+<br>
+<p>
+{{ body }}
+</p>
+<br> --
+<br> With respect,
+<br><br>
+{{ sender }}
+</body></html>
+"""
 
 def send(subject, users, data={}, template=DEFAULT_TEMPLATE):
     """
@@ -25,8 +39,9 @@ def send(subject, users, data={}, template=DEFAULT_TEMPLATE):
     Example: cvl_mail.send("subject", ("manager@example.com","admin@example.com"), { 'body':'body', 'sender':'server@int.example.com' } )
     """
 
-    file = open(template, 'r')
-    template = file.read()
+    # TODO 
+    #file = open(template, 'r')
+    #template = file.read()
 
     rt = Environment().from_string(template).render(**data)
     msg = MIMEText(rt, 'html')
